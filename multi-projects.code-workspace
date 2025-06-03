@@ -1,7 +1,7 @@
 {
     "folders": [
       { "name": "Parcial_2",   "path": "parcial_2" },
-      { "name": "Proyecto_final", "path": "Proyecto_final" },
+      { "name": "Proyecto_final", "path": "proyecto_final" },
     ],
     "settings": {
       // para que CMake Tools busque en la raíz

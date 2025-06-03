@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspaces/Parciales/parcial_2/build",
+  "command": "/usr/bin/clang++   -I/workspaces/Parciales/parcial_2/include  -g   -o CMakeFiles/parcial_2.dir/main.cpp.o -c /workspaces/Parciales/parcial_2/main.cpp",
+  "file": "/workspaces/Parciales/parcial_2/main.cpp"
+}
+]

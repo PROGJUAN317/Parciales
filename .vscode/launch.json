@@ -13,5 +13,17 @@
         "miDebuggerPath": "/usr/bin/gdb",
         "preLaunchTask": "Build Parcial_2"
       },
+      {
+        "name": "Debug Proyecto_final",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/bin/Proyecto_final",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "preLaunchTask": "Build Proyecto_final"
+      }
     ]
   }

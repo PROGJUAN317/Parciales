@@ -23,6 +23,18 @@
       "problemMatcher": ["$gcc"],
       "dependsOn": "CMake: Configure"
     },
+    {
+      "label": "Build Proyecto_final",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "${workspaceFolder}/build",
+        "--target", "Proyecto_final"
+      ],
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "dependsOn": "CMake: Configure"
+    }
     /// uno por cada proyecto/carpeta
   ]
 }

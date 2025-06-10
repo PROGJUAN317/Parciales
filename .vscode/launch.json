@@ -24,6 +24,18 @@
         "MIMode": "gdb",
         "miDebuggerPath": "/usr/bin/gdb",
         "preLaunchTask": "Build Proyecto_final"
+      },
+      {
+        "name": "Debug Plantilla",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/bin/plantilla",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "preLaunchTask": "Build Plantilla"
       }
     ]
   }

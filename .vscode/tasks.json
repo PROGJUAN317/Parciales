@@ -34,6 +34,18 @@
       "group": "build",
       "problemMatcher": ["$gcc"],
       "dependsOn": "CMake: Configure"
+    },
+    {
+      "label": "Build Plantilla",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build", "${workspaceFolder}/build",
+        "--target", "plantilla"
+      ],
+      "group": "build",
+      "problemMatcher": ["$gcc"],
+      "dependsOn": "CMake: Configure"
     }
     /// uno por cada proyecto/carpeta
   ]

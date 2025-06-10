@@ -18,6 +18,13 @@ public:
   void registrar() override;
   void login() override;
 
+  // Métodos específicos de Alumno
+  void menuAlumno();
+  void listarCursosDisponibles();
+  void listarCursosInscritos();
+  void listarLeccionesCurso(std::string tituloCurso);
+  void verLeccion(std::string tituloCurso, std::string tituloLeccion);
+  void verCalificacion(std::string tituloCurso, std::string tituloLeccion);
   void inscribirCurso();
   void mostrarCursos();
   void mostrarCalificaciones();

@@ -1,4 +1,5 @@
 #include "Alumno.hpp"
+#include "Curso.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -57,8 +58,41 @@ void Alumno::login() {
               << std::endl;
   }
 
-  // Implementar lógica de entrada
+  menuAlumno();
 }
+
+void Alumno::menuAlumno() {
+  int opcion;
+  do {
+    std::cout << "Menu Alumno: " << std::endl;
+    std::cout << "1. Inscribir curso" << std::endl;
+    std::cout << "2. Mostrar cursos" << std::endl;
+    std::cout << "3. Mostrar calificaciones" << std::endl;
+    std::cout << "4. Cerrar sesión" << std::endl;
+    std::cout << "Seleccione una opción: ";
+    std::cin >> opcion;
+    std::cin.ignore();  // Limpiar el buffer de entrada
+
+    switch (opcion) {
+    case 1:
+      inscribirCurso();
+      break;
+    case 2:
+      mostrarCursos();
+      break;
+    case 3:
+      mostrarCalificaciones();
+      break;
+    case 4:
+      std::cout << "Cerrando sesión..." << std::endl;
+      break;
+    default:
+      std::cout << "Opción inválida. Intente nuevamente." << std::endl;
+      break;
+    }
+  } while (opcion != 4);
+}
+
 void Alumno::inscribirCurso() {
   std::string tituloCurso;
   std::cout << "Ingrese el título del curso a inscribir: ";

@@ -4,12 +4,14 @@
 #include <vector>
 
 class Curso {
-public:
+protected:
   std::string titulo;
   std::string descripcion;
   std::vector<Leccion> lecciones;
 
 public:
+  static std::vector<Curso*> cursosDisponibles;
+  // Constructores
   Curso();
   Curso(std::string titulo, std::string descripcion);
 

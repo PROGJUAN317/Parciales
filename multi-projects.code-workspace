@@ -6,7 +6,10 @@
     ],
     "settings": {
       // para que CMake Tools busque en la raíz
-      "cmake.sourceDirectory": "${workspaceFolder}"
+      "cmake.sourceDirectory": "${workspaceFolder}",
+      "files.associations": {
+        "ostream": "cpp"
+      }
     },
     "extensions": {
       "recommendations": [

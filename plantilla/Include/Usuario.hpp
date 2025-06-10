@@ -1,11 +1,17 @@
 #pragma once
 #include <string>
+#include <vector>
+#include <iostream>
+#include "Alumno.hpp"
+#include "Docente.hpp"
+#include "Curso.hpp"
 
 class Usuario {
 protected:
   std::string nombreUsuario;  
   std::string identificacion;
   std::string correo;
+
 public:
   // Metodos
   Usuario();

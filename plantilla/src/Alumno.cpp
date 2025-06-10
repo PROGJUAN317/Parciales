@@ -14,6 +14,7 @@ Alumno::Alumno(std::string nombreUsuario, std::string identificacion, std::strin
     : Usuario(nombreUsuario, identificacion, correo), cursosInscritos(cursosInscritos) {}
 
 void Alumno::registrar() {
+  // Implementar lógica de registro
   std::cout << "Registrando alumno: " << std::endl;
   std::cout << "Nombre de usuario: " << std::endl;
   std::string nombreUsuario;
@@ -25,8 +26,9 @@ void Alumno::registrar() {
   std::cout << "Correo electrónico: " << std::endl;
   std::getline(std::cin, correo);
   setCorreo(correo);
+  Alumno::alumnosInscritos.push_back(this); // Agregar el alumno a la lista estática
   std::cout << "Alumno registrado correctamente." << std::endl;
-  // Implementar lógica de registro
+  
 }
 
 void Alumno::login() {
@@ -34,7 +36,27 @@ void Alumno::login() {
   std::string nombreUsuario;
   std::cout << "Ingrese su nombre de usuario: ";
   std::getline(std::cin, nombreUsuario);
-  
+  std::string identificacion;
+  std::cout << "Ingrese su identificación: ";
+  std::getline(std::cin, identificacion);
+  bool usuarioEncontrado = false;
+      // Si se encuentra el usuario, se establece el nombre de usuario y la
+      // identificación del objeto actual
+  for (int i = 0; i < Alumno::alumnosInscritos.size(); ++i) {
+    if (Alumno::alumnosInscritos[i]->getNombreUsuario() == nombreUsuario && 
+        Alumno::alumnosInscritos[i]->getIdentificacion() == identificacion) {
+
+      usuarioEncontrado = true;
+      break;
+    }
+  }
+  if (usuarioEncontrado) {
+    std::cout << "Inicio de sesión exitoso." << std::endl;
+  } else {
+    std::cout << "Usuario o identificación incorrectos. Intente nuevamente."
+              << std::endl;
+  }
+
   // Implementar lógica de entrada
 }
 void Alumno::inscribirCurso() {
